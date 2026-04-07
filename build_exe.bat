@@ -11,6 +11,14 @@ pyinstaller ^
     --windowed ^
     --name "CopyrightVisualMonitor_v2" ^
     --add-data "tessdata;tessdata" ^
+    --add-data "templates;templates" ^
+    --exclude-module tensorflow ^
+    --exclude-module keras ^
+    --exclude-module torch ^
+    --exclude-module matplotlib ^
+    --exclude-module scipy ^
+    --exclude-module sqlalchemy ^
+    --hidden-import=win10toast ^
     main.py
 
 echo.
